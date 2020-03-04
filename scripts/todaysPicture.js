@@ -13,7 +13,6 @@ fetch(url)
 })
 .then(function(json) {
     let date = moment(json.date, "YYYY-MM-DD").format("LL");
-    console.log(date);
     let htmlContent = "";
     htmlContent += `<p>${date} – ${json.title}</p>`
     if(json.media_type == "image"){
@@ -25,7 +24,6 @@ fetch(url)
     htmlContent += `<p class="explanation">${json.explanation}</p>`;
     document.getElementById("todaysPictureWrapper").innerHTML = htmlContent;
     document.getElementById("todaysPictureWrapper").className = "";
-    console.log(json);
 });
 
 // ------------- JSON -------------

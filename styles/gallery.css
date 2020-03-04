@@ -1,3 +1,11 @@
+#imgCollectionLoading.hidden {
+    display: none;
+}
+
+#imgCollectionLoading {
+    text-align: center;
+}
+
 #imgCollection.hidden img{
     opacity: 0;
     height: 0;

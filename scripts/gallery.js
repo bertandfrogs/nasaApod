@@ -18,9 +18,10 @@ for(let i = 0; i < 30; i++){
     .then(function(json) {
         if(json.media_type == "image"){ // only add to gallery if it's an image
             document.getElementById("imgCollection").innerHTML += `<img src="${json.url}"/>`;
-            if(i == 29){
-                document.getElementById("imgCollection").className = "";
-            }
+        }
+        if(i === 29){
+            document.getElementById("imgCollectionLoading").className = "hidden";
+            document.getElementById("imgCollection").className = "";
         }
     })
 }
